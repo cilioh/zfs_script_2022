@@ -1,0 +1,11 @@
+[global]
+filename=/mnt/lustre/test
+filesize=128G
+
+[test]
+rw=write
+direct=0
+bs=1m
+numjobs=8
+fallocate=none
+

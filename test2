@@ -1,0 +1,71 @@
+net:
+    - net type: lo
+      local NI(s):
+        - nid: 0@lo
+          status: up
+          statistics:
+              send_count: 0
+              recv_count: 0
+              drop_count: 0
+          tunables:
+              peer_timeout: 0
+              peer_credits: 0
+              peer_buffer_credits: 0
+              credits: 0
+          dev cpt: 0
+          tcp bonding: 0
+          CPT: "[0,1]"
+    - net type: o2ib1
+      local NI(s):
+        - nid: 10.10.200.108@o2ib1
+          status: up
+          interfaces:
+              0: ib0
+          statistics:
+              send_count: 0
+              recv_count: 0
+              drop_count: 0
+          tunables:
+              peer_timeout: 180
+              peer_credits: 8
+              peer_buffer_credits: 0
+              credits: 256
+              peercredits_hiw: 4
+              map_on_demand: 0
+              concurrent_sends: 8
+              fmr_pool_size: 512
+              fmr_flush_trigger: 384
+              fmr_cache: 1
+              ntx: 512
+              conns_per_peer: 1
+          lnd tunables:
+          dev cpt: 0
+          tcp bonding: 0
+          CPT: "[0,1]"
+    - net type: o2ib
+      local NI(s):
+        - nid: 10.10.200.108@o2ib
+          status: up
+          interfaces:
+              0: ib0
+          statistics:
+              send_count: 277
+              recv_count: 274
+              drop_count: 0
+          tunables:
+              peer_timeout: 180
+              peer_credits: 8
+              peer_buffer_credits: 0
+              credits: 256
+              peercredits_hiw: 4
+              map_on_demand: 0
+              concurrent_sends: 8
+              fmr_pool_size: 512
+              fmr_flush_trigger: 384
+              fmr_cache: 1
+              ntx: 512
+              conns_per_peer: 1
+          lnd tunables:
+          dev cpt: 0
+          tcp bonding: 0
+          CPT: "[0,1]"
